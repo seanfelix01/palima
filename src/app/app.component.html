@@ -1,2 +1,19 @@
-<h1>Palima, Sean Felix</h1>
-<post-create></post-create>
+<app-header></app-header>
+
+<main>
+  <h1>Palima, Sean Felix</h1>
+
+  <!-- PostCreateComponent for adding new posts -->
+  <app-post-create (postAdded)="addPost($event)"></app-post-create>
+
+  <!-- Display the list of posts -->
+  <div *ngIf="posts.length > 0">
+    <h2>Lists:</h2>
+    <ul>
+      <li *ngFor="let post of posts">
+        <strong>{{ post.title }}</strong><br>
+        <p>{{ post.content }}</p>
+      </li>
+    </ul>
+  </div>
+</main>

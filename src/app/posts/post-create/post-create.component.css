@@ -1,0 +1,64 @@
+/* Push the container down to avoid header overlap */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the top */
+  width: 100%;
+  margin-top: 150px; /* Adjust this value based on your header size */
+}
+
+/* Labels for input fields */
+label {
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+  display: block;
+  text-align: left;
+  width: 100%; /* Align labels with input boxes */
+  margin-left: 20%; /* Adjust this value to center the labels */
+}
+
+/* Input and textarea styling */
+input, textarea {
+  width: 80%; /* Make inputs 80% of container width */
+  padding: 8px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  margin-left: 10%; /* Center inputs in the container */
+  margin-right: 10%; /* Center inputs in the container */
+}
+
+textarea {
+  height: 80px; /* Adjust the height of the textarea */
+  resize: none;
+}
+
+/* Button styling */
+button {
+  background-color: #700000;
+  color: white;
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto; /* This will center the button horizontally */
+}
+
+button:hover {
+  background-color: #900000;
+}
+
+/* Style for the mat-card */
+mat-card {
+  width: 90vw;
+  margin: 10px 0;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
