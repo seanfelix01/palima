@@ -13,8 +13,7 @@ interface Post {
 export class AppComponent {
   title = 'palima';
 
-  // Initial empty posts array
-  posts: Post[] = [];
+  posts: Post[] = [];  // Initially empty posts array
 
   // Method to handle the addition of a new post
   addPost(newPost: Post) {

@@ -16,7 +16,7 @@ export class PostCreateComponent {
   enteredContent = '';
 
   onAddPost() {
-    if (this.enteredTitle && this.enteredContent) {
+    if (this.enteredTitle.trim() && this.enteredContent.trim()) {
       const newPost: Post = {
         title: this.enteredTitle,
         content: this.enteredContent

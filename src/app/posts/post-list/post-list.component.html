@@ -1,0 +1,16 @@
+<div *ngFor="let post of posts; let i = index" class="post-container">
+  <div class="post-header" (click)="toggleContent(i)">
+      <h2>{{ post.title }}</h2>
+      <button class="toggle-btn" (click)="$event.stopPropagation();">
+          {{ expandedIndex == i ? '▲' : '▼' }}
+      </button>
+  </div>
+
+  <div *ngIf="expandedIndex == i" class="post-content">
+      <p>{{ post.content }}</p>
+      <div class="button-group">
+          <button class="edit-btn" (click)="editPost(i); $event.stopPropagation();">Edit</button>
+          <button class="delete-btn" (click)="onDelete(post.id); $event.stopPropagation();">Delete</button>
+      </div>
+  </div>
+</div>
